@@ -409,6 +409,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.huhx0015.tiply;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -423,6 +424,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.huhx0015.tiply;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -491,6 +493,7 @@
 				80887A811D3858BE0020DD80 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		80887A821D3858BE0020DD80 /* Build configuration list for PBXNativeTarget "Tip.lyTests" */ = {
 			isa = XCConfigurationList;
@@ -499,6 +502,7 @@
 				80887A841D3858BE0020DD80 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		80887A851D3858BE0020DD80 /* Build configuration list for PBXNativeTarget "Tip.lyUITests" */ = {
 			isa = XCConfigurationList;
@@ -507,6 +511,7 @@
 				80887A871D3858BE0020DD80 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
