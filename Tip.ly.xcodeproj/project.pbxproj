@@ -14,6 +14,7 @@
 		80887A651D3858BE0020DD80 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80887A631D3858BE0020DD80 /* LaunchScreen.storyboard */; };
 		80887A701D3858BE0020DD80 /* Tip_lyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80887A6F1D3858BE0020DD80 /* Tip_lyTests.swift */; };
 		80887A7B1D3858BE0020DD80 /* Tip_lyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80887A7A1D3858BE0020DD80 /* Tip_lyUITests.swift */; };
+		80FFF3241D59C330006A1C6A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FFF3231D59C330006A1C6A /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		80887A761D3858BE0020DD80 /* Tip.lyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tip.lyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		80887A7A1D3858BE0020DD80 /* Tip_lyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tip_lyUITests.swift; sourceTree = "<group>"; };
 		80887A7C1D3858BE0020DD80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		80FFF3231D59C330006A1C6A /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				80887A5A1D3858BE0020DD80 /* AppDelegate.swift */,
 				80887A5C1D3858BE0020DD80 /* ViewController.swift */,
 				80887A5E1D3858BE0020DD80 /* Main.storyboard */,
+				80FFF3231D59C330006A1C6A /* SettingsViewController.swift */,
 				80887A611D3858BE0020DD80 /* Assets.xcassets */,
 				80887A631D3858BE0020DD80 /* LaunchScreen.storyboard */,
 				80887A661D3858BE0020DD80 /* Info.plist */,
@@ -259,6 +262,7 @@
 			files = (
 				80887A5D1D3858BE0020DD80 /* ViewController.swift in Sources */,
 				80887A5B1D3858BE0020DD80 /* AppDelegate.swift in Sources */,
+				80FFF3241D59C330006A1C6A /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
