@@ -20,6 +20,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var billField: UITextField! // References the bill input field.
     
     let defaults = NSUserDefaults.standardUserDefaults() // References the user defaults object.
+    let KEY_DEFAULT_TIP_VALUE = "key_default_tip_value" // Constant that references the key name for the default tip value.
     let KEY_BILL_OPTION = "key_bill_option" // Constant that references the key name for the default bill option.
     let KEY_BILL_VALUE = "key_bill_value" // Constant that references the key name for the default bill value.
     let KEY_PERCENT_OPTION = "key_percent_option" // Constant that references the key name for the default percent option.
@@ -75,11 +76,14 @@ class ViewController: UIViewController {
     // presetLabels(): Presets the field and label text.
     func presetLabels() {
         
+        let defaultTipValue = defaults.floatForKey(KEY_DEFAULT_TIP_VALUE) // Retrieves the default tip value.
         let retainBillOption = defaults.boolForKey(KEY_BILL_OPTION) // Retrieves the retain bill option from user defaults.
         let retainBillValue = defaults.doubleForKey(KEY_BILL_VALUE) // Retrieves the retain bill value from user defaults.
         let retainPercentOption = defaults.boolForKey(KEY_PERCENT_OPTION) // Retrieves the percent tip option from user defaults.
         let retainPercentValue = defaults.floatForKey(KEY_PERCENT_VALUE) // Retrieves the percent tip value from user defaults.
     
+        print("presetLabels: " + String(defaultTipValue))
+        
         // RETAIN BILL VALUE:
         if (retainBillOption) {
             billField.text = String(format: "%.2f", retainBillValue)
@@ -90,6 +94,8 @@ class ViewController: UIViewController {
         // RETAIN TIP PERCENTAGE VALUE:
         if (retainPercentOption) {
             currentTipPercentage = retainPercentValue // Sets the retained percent value to currentTipPercentage.
+        } else {
+            currentTipPercentage = defaultTipValue / 100 // Sets the default tip value to currentTipPercentage.
         }
         
         percentageLabel.text = String(format: "%.2f", currentTipPercentage * 100) + "%" // Sets the percentage label text value.
@@ -117,9 +123,17 @@ class ViewController: UIViewController {
         let tip = bill * Double(currentTipPercentage) // Value for the tip text.
         let total = bill + tip // Value for the total text.
         
+        // Gets the locale data for the device to apply the appropriate currency symbol 
+        // and number separator format.
+        let locale = NSLocale.currentLocale()
+        let currencyFormatter = NSNumberFormatter()
+        currencyFormatter.usesGroupingSeparator = true
+        currencyFormatter.numberStyle = NSNumberFormatterStyle.CurrencyStyle
+        currencyFormatter.locale = locale
+        
         percentageLabel.text = String(format: "%.2f", currentTipPercentage * 100) + "%" // Sets the percentage label text value.
-        tipLabel.text = String(format: "$%.2f", tip) // Sets the tip label text value.
-        totalLabel.text = String(format: "$%.2f", total) // Sets the total label text value.
+        tipLabel.text = currencyFormatter.stringFromNumber(tip)! // Sets the tip label text value.
+        totalLabel.text = currencyFormatter.stringFromNumber(total)! // Sets the total label text value.
         
         saveUserDefaultValues(bill) // Saves the tip and percentage values into user defaults.
     }
