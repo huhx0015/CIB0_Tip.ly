@@ -4,6 +4,9 @@ Submitted By: huhx0015
 
 Time Spent: 6 Hours
 
+TIP.LY
+![tiply_preview](https://cloud.githubusercontent.com/assets/1645482/17576747/0dd8d7b6-5f2b-11e6-9bbe-e738c711e036.gif)
+
 ## Description
 
 Tip.ly is a simple tip calculator application developed in Swift for the iOS platform. 
@@ -25,14 +28,6 @@ The following **additional** features are implemented:
 
 - [x] Implemented a slider to set a custom tip percentage.
 - [x] Implemented additional Settings toggle for remembering and setting a custom tip percentage value.
-
-## Video Walkthrough
-
-Here's a walkthrough of implemented user stories:
-
-![tiply_preview](https://cloud.githubusercontent.com/assets/1645482/17576747/0dd8d7b6-5f2b-11e6-9bbe-e738c711e036.gif)
-
-GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
