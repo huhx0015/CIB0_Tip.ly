@@ -1,6 +1,8 @@
 # CIB0: Tip.ly
 
-DEVELOPER: huhx0015
+Submitted By: huhx0015
+
+Time Spent: 6 Hours
 
 ### TIP.LY
 ![tiply_preview](https://cloud.githubusercontent.com/assets/1645482/17576747/0dd8d7b6-5f2b-11e6-9bbe-e738c711e036.gif)
